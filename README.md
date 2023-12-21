@@ -68,17 +68,17 @@ Jenkins SSH Configuration:
 --------------------------
 
 Under Dashboard > Manage Jenkins > select System SSH remote hosts.
-Enter the Hostname and Port (e.g., 22).
+Enter the Hostname and Port (e.g., 22) of the server.
 Select the credentials added recently. Apply the changes.
 
 Create a Freestyle Project:
 ---------------------------
-1 In the Jenkins Dashboard, click on New Item and give it a name.
-2 Choose Freestyle Project.
-3 Provide a description for the project.
-4 Configure Source Code Management: Choose Git, enter the Repository URL, and set Branches to build (e.g., */main).
-5 In Build Triggers, select "GitHub hook trigger for GITScm pooling."
-6 In Build Steps, add the following script:
+1. In the Jenkins Dashboard, click on New Item and give it a name.
+2. Choose Freestyle Project.
+3. Provide a description for the project.
+4. Configure Source Code Management: Choose Git, enter the Repository URL, and set Branches to build (e.g., */main).
+5. In Build Triggers, select "GitHub hook trigger for GITScm pooling."
+6. In Build Steps, add the following script:
 Copy code
 ```bash
 #!/bin/bash
