@@ -46,8 +46,10 @@ http://<ip-jenkins>:<port>/github-webhook
 
 Set Content type to application/json.
 Select the events you want to trigger this webhook.
+Jenkins
+-------
 
-Jenkins Plugin Installation:
+1. Jenkins Plugin Installation:
 ----------------------------
 
 Under Dashboard > Manage Jenkins > select Plugins
@@ -55,7 +57,7 @@ Search for GitHub and SSH in Available Plugins and install them.
 Restart Jenkins after installing plugins.
 
 
-Credentials Configuration:
+2. Credentials Configuration:
 --------------------------
 
 
@@ -64,21 +66,21 @@ Click on Global under Domain.
 Add Credentials: Kind - Username with Password.
 
 
-Jenkins SSH Configuration:
+3. Jenkins SSH Configuration:
 --------------------------
 
 Under Dashboard > Manage Jenkins > select System SSH remote hosts.
 Enter the Hostname and Port (e.g., 22) of the server.
 Select the credentials added recently. Apply the changes.
 
-Create a Freestyle Project:
+4. Create a Freestyle Project:
 ---------------------------
-1. In the Jenkins Dashboard, click on New Item and give it a name.
-2. Choose Freestyle Project.
-3. Provide a description for the project.
-4. Configure Source Code Management: Choose Git, enter the Repository URL, and set Branches to build (e.g., */main).
-5. In Build Triggers, select "GitHub hook trigger for GITScm pooling."
-6. In Build Steps, add the following script:
+ 1. In the Jenkins Dashboard, click on New Item and give it a name.
+ 2. Choose Freestyle Project.
+ 3. Provide a description for the project.
+ 4. Configure Source Code Management: Choose Git, enter the Repository URL, and set Branches to build (e.g., */main).
+ 5. In Build Triggers, select "GitHub hook trigger for GITScm pooling."
+ 6. In Build Steps, add the following script:
 Copy code
 ```bash
 #!/bin/bash
